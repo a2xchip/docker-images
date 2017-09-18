@@ -1,2 +1,2 @@
-# nginx-symfony3-image
-Docker image ready for Symfony 3
+# Docker: NGINX ready for Symfony
+This is a Docker container with nginx, ready to handle a Symfony application.
