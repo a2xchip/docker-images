@@ -10,6 +10,5 @@ ENV NGINX_TRY_FILES_XX /app.php\$is_args\$args /app_dev.php\$is_args\$args /inde
 ENV NGINX_TRY_FILES /app.php\$is_args\$args
 ENV NGINX_PHP_HOST_AND_PORT localhost:9000
 
-
 WORKDIR /var/www/application
 CMD /bin/run.sh
