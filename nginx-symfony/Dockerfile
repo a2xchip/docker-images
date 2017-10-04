@@ -2,7 +2,8 @@ FROM nginx:1
 
 COPY default.conf.tmpl /etc/nginx/conf.d/site.tmpl
 COPY run.sh /bin/run.sh
-ENV NGINX_LISTEN_PORT 80
+ENV NGINX_LISTEN_PORT_HTTP 80
+ENV NGINX_LISTEN_PORT_HTTPS 443
 ENV NGINX_WEBROOT "/var/www/application/web"
 ENV NGINX_SERVERNAME nginx_pco
 ENV NGINX_INDEX_FILES app.php app_dev.php index.php index.html
