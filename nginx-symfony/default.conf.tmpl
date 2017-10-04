@@ -9,6 +9,7 @@ server {
     }
 
     sendfile off;
+
     location ~ ^/.+\.php(/|$) {
         fastcgi_pass ${NGINX_PHP_HOST_AND_PORT};
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
@@ -17,5 +18,3 @@ server {
         fastcgi_param HTTPS off;
     }
 }
-
-
