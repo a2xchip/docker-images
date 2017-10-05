@@ -18,7 +18,7 @@ ADD etc/supervisor/conf.d/elasticsearch.conf /etc/supervisor/conf.d/elasticsearc
 RUN apt-get install -y apt-transport-https
 RUN apt-get install --no-install-recommends -y logstash
 ADD etc/supervisor/conf.d/logstash.conf /etc/supervisor/conf.d/logstash.conf
-RUN bin/logstash-plugin install logstash-filter-translate
+#RUN bin/logstash-plugin install logstash-filter-translate
 
 # Kibana
 RUN apt-get install --no-install-recommends -y logstash
