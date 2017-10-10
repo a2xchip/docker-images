@@ -22,7 +22,6 @@ ADD etc/supervisor/conf.d/logstash.conf /etc/supervisor/conf.d/logstash.conf
 
 # Kibana
 RUN apt-get install --no-install-recommends -y logstash
-RUN sed -i 's/port: 5601/port: 80/' /opt/kibana/config/kibana.yml
 ADD etc/supervisor/conf.d/kibana.conf /etc/supervisor/conf.d/kibana.conf
 
 RUN apt-get clean
