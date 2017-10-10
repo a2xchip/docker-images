@@ -27,6 +27,7 @@ ADD etc/supervisor/conf.d/kibana.conf /etc/supervisor/conf.d/kibana.conf
 RUN apt-get clean
 
 EXPOSE 5601
+EXPOSE 9200
 
 ENV PATH /opt/logstash/bin:$PATH
 
