@@ -21,14 +21,13 @@ ADD etc/supervisor/conf.d/logstash.conf /etc/supervisor/conf.d/logstash.conf
 #RUN bin/logstash-plugin install logstash-filter-translate
 
 # Kibana
-RUN apt-get install --no-install-recommends -y logstash
+RUN apt-get install --no-install-recommends -y kibana
 ADD etc/supervisor/conf.d/kibana.conf /etc/supervisor/conf.d/kibana.conf
 
 RUN apt-get clean
 
-EXPOSE 80
+EXPOSE 5601
 
 ENV PATH /opt/logstash/bin:$PATH
 
 CMD [ "/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf" ]
-
