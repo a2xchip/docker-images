@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y apt-transport-h
 # Elasticsearch
 RUN curl -L https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.2.tar.gz | tar xz -C /opt
 RUN ln -s /opt/elasticsearch-5.6.2 /opt/elasticsearch
-RUN sed -i '/#cluster.name:.*/a cluster.name: logstash' /etc/elasticsearch/elasticsearch.yml
-RUN sed -i '/#path.data: \/path\/to\/data/a path.data: /data' /etc/elasticsearch/elasticsearch.yml
+#RUN sed -i '/#cluster.name:.*/a cluster.name: logstash' /etc/elasticsearch/elasticsearch.yml
+#RUN sed -i '/#path.data: \/path\/to\/data/a path.data: /data' /etc/elasticsearch/elasticsearch.yml
 ADD etc/supervisor/conf.d/elasticsearch.conf /etc/supervisor/conf.d/elasticsearch.conf
 #RUN /opt/bin/elasticsearch
 
