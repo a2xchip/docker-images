@@ -1,4 +1,4 @@
-FROM java:9
+FROM java:8
 
 ARG DEBIAN_FRONTEND=noninteractive
 
