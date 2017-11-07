@@ -13,7 +13,7 @@ ADD etc/supervisor/conf.d/elasticsearch.conf /etc/supervisor/conf.d/elasticsearc
 RUN curl -L https://artifacts.elastic.co/downloads/logstash/logstash-5.6.2.tar.gz | tar xz -C /opt
 RUN ln -s /opt/logstash-5.6.2 /opt/logstash
 ADD stdout.log /var/log/logstash/stdout.log
-ADD etc/supervisor/conf.d/logstash.conf /etc/supervisor/conf.d/logstash.conf
+RUN touch /etc/supervisor/conf.d/logstash.conf
 RUN /opt/logstash/bin/logstash-plugin install logstash-filter-translate
 
 # Kibana
