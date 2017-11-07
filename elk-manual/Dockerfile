@@ -21,6 +21,7 @@ RUN curl -L https://artifacts.elastic.co/downloads/kibana/kibana-5.6.2-linux-x86
 RUN ln -s /opt/kibana-5.6.2-linux-x86_64 /opt/kibana
 ADD etc/supervisor/conf.d/kibana.conf /etc/supervisor/conf.d/kibana.conf
 
+EXPOSE 80
 EXPOSE 5601
 EXPOSE 9200
 
