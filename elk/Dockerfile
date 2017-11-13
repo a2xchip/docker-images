@@ -26,6 +26,7 @@ ADD etc/supervisor/conf.d/kibana.conf /etc/supervisor/conf.d/kibana.conf
 
 RUN apt-get clean
 
+EXPOSE 80
 EXPOSE 5601
 EXPOSE 9200
 
